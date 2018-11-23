@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import './App.css';
+import MyHeader from './component/header.js';
+import MyFooter from './component/footer.js';
+import MyMiddle from './component/middle.js';
+
+
+const { SubMenu } = Menu;
+const { Header, Content, Sider } = Layout;
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Layout>
+				<MyHeader />
+				<MyMiddle />
+				<MyFooter />
+			</Layout>
     );
   }
 }
